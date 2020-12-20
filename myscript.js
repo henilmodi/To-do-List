@@ -15,11 +15,9 @@ function add() {
     show();
     return false;
 }
-function clearDefault() {
-    fi(a.defaultvalue==a.value)
-    {
-        a.value=" "
-    }
+function clearDefault(a) {
+    if(a.defaultvalue==a.value)
+    { a.value=" "}
 };
 
 function remove() {
@@ -43,7 +41,6 @@ function show() {
     document.getElementById('todos').innerHTML=html;
 
     var buttons=document.getElementsByClassName('remove');
-
     for(var i=0;i<buttons.length;i++)
     {
        buttons[i].addEventListener('click',remove);
